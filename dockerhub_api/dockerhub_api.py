@@ -914,6 +914,14 @@ class DockerHub(object):
 
 
 if __name__ == '__main__':
+
+
+    api = DockerHub(url="https://hub.docker.com/_/fedora")
+    #address_ = api.url +'/_catalog'
+
+    resp = api._do_requests_get(address= api.url)
+
+    print(resp)
     pass
 
 __all__ = ["DockerHub", "DockerHubAuth", "AuthenticationError", "ConnectionError", "TimeoutError"]
